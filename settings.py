@@ -1,7 +1,6 @@
-# brainwave_project/settings.py
 from pathlib import Path
 
-# BASE_DIR definition
+# Define BASE_DIR as a Path object
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 SECRET_KEY = 'your-secret-key'
@@ -15,7 +14,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'main',  # Fügen Sie Ihre App hier hinzu
+    'main',  # Add your app here
 ]
 
 MIDDLEWARE = [
@@ -33,7 +32,7 @@ ROOT_URLCONF = 'brainwave_project.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [BASE_DIR / 'main' / 'templates'],  # Verwenden Sie den / Operator für Path-Objekte
+        'DIRS': [BASE_DIR / 'main' / 'templates'],  # Use / operator with Path objects
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -51,8 +50,8 @@ WSGI_APPLICATION = 'brainwave_project.wsgi.application'
 DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',  # Verwenden Sie den / Operator für Path-Objekte
+        'NAME': BASE_DIR / 'db.sqlite3',  # Use / operator with Path objects
     }
 }
 
-# Weitere Einstellungen...
+# Other settings...
